@@ -10,15 +10,22 @@ import numpy as np
 
 import theano
 import theano.tensor as T
-import keras
-from keras import backend as K
-from keras import initializations
-from keras.regularizers import l2, activity_l2
-from keras.models import Sequential, Graph, Model
-from keras.layers.core import Dense, Lambda, Activation
-from keras.layers import Embedding, Input, Dense, merge, Reshape, Merge, Flatten, Dropout
-from keras.constraints import maxnorm
-from keras.optimizers import Adagrad, Adam, SGD, RMSprop
+import theano
+import theano.tensor as T
+# import tensorflow.python.keras as keras
+from tensorflow.python.keras import backend as K
+from tensorflow.python.keras import initializers
+from tensorflow.python.keras.regularizers import l1, l2, l1_l2
+from tensorflow.python.keras.models import Sequential, Model
+from tensorflow.python.keras.layers.core import Dense, Lambda, Activation
+from tensorflow.python.keras.layers import Embedding, Input, Dense, merge, Reshape, Flatten, Dropout
+from tensorflow.python.keras.optimizers import Adagrad, Adam, SGD, RMSprop
+from evaluate import evaluate_model
+from Dataset import Dataset
+from time import time
+import sys
+import GMF, MLP
+import argparse
 from evaluate import evaluate_model
 from Dataset import Dataset
 from time import time
